@@ -1,0 +1,118 @@
+% letter.tex
+\documentclass[letterpaper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage{mathptmx}
+\usepackage{blindtext}
+\pagenumbering{gobble}
+
+% --------------------------------------------------------------------------- %
+% newcommands setting up the document: replace with your information!
+% --------------------------------------------------------------------------- %
+% YOUR DETAILS
+\newcommand{\yourName}   {(Your Name)}
+\newcommand{\yourCompany}{(Your Company)}
+\newcommand{\yourStreet} {(Your Street)}
+\newcommand{\yourCity}   {(Your City)}
+\newcommand{\yourState}  {(Your State)}
+\newcommand{\yourZip}    {(Your Zip Code)}
+\newcommand{\yourEmail}  {(Your email)}
+\newcommand{\yourPhone}  {(Your Phone Number)}
+\newcommand{\yourAddress}{
+    \yourStreet\\\yourCity, \yourState\enspace\yourZip}
+
+% RECIPIENT DETAILS
+\newcommand{\recipientName}   {(Recipient Name)}
+\newcommand{\recipientCompany}{(RecipientCompany)}
+\newcommand{\recipientStreet} {(Recipient Street)}
+\newcommand{\recipientCity}   {(Recipient City)}
+\newcommand{\recipientState}  {(Recipient State)}
+\newcommand{\recipientZip}    {(Recipient Zip Code)}
+\newcommand{\recipientEmail}  {(Recipient email)}
+\newcommand{\recipientEhone}  {(Recipient Phone Number)}
+\newcommand{\recipientAddress}{
+    \recipientStreet\\\recipientCity, \recipientState\enspace\recipientZip}
+
+\newcommand{\opening}{Dear Person/Persons,}
+\newcommand{\salutation}{Sincerely,}
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+% newcommands setting up bigger macros in the document
+% --------------------------------------------------------------------------- %
+\newcommand{\closing}{
+    \bigskip
+    \salutation\\
+    \vspace{5em}
+    \yourName
+}
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+% newcounters
+% --------------------------------------------------------------------------- %
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+% newenvironments for controlling the structure of paragraphs
+% --------------------------------------------------------------------------- %
+\renewenvironment{paragraph}{
+    \bigskip
+}
+{\\}
+
+\newenvironment{body}{
+    \bigskip
+}
+{\\}
+% --------------------------------------------------------------------------- %
+
+\begin{document}
+% --------------------------------------------------------------------------- %
+% Header
+% --------------------------------------------------------------------------- %
+\begin{flushright}
+    \today\\
+    \bigskip
+    \yourName\\
+    \yourCompany\\
+    \yourStreet\\
+    \yourEmail\\
+    \yourPhone\\
+\end{flushright}
+
+\recipientName\\
+\recipientCompany\\
+\recipientAddress\\
+\recipientEmail\\
+\recipientEhone\\
+
+\bigskip
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+\opening\\
+% --------------------------------------------------------------------------- %
+
+% --------------------------------------------------------------------------- %
+% BODY
+% --------------------------------------------------------------------------- %
+\begin{paragraph}
+    \blindtext
+\end{paragraph}
+
+\begin{paragraph}
+    \blindtext
+\end{paragraph}
+
+\begin{paragraph}
+    \blindtext
+\end{paragraph}
+% --------------------------------------------------------------------------- %
+
+\closing
+
+\end{document}
+
